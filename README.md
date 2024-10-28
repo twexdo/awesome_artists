@@ -1,4 +1,4 @@
-# Project Title
+# Awesome Artists 
 
 ## Overview
 
