@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Frontend",
+      "type": "shell",
+      "command": "yarn start",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",  // Opens in a dedicated panel
+        "group": "frontend-group"  // Use a custom group for the frontend
+      }
+    },
+    {
+      "label": "Backend",
+      "type": "shell",
+      "command": "yarn start:dev",
+      "options": {
+        "cwd": "${workspaceFolder}/backend",
+
+      },
+      "presentation": {
+        
+        "reveal": "always",
+        "panel": "shared",  // Opens in a shared terminal (you could also set this to dedicated)
+        "group": "backend-group",  // Use a custom group for the backend,
+        
+        
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Both",
+      "dependsOn": [
+        "Frontend",
+        "Backend"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
